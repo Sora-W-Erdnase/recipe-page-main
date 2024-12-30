@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-peach:hsl(30, 54%, 90%);
+    --clr-peach-light:hsl(30, 18%, 87%);
+    --clr-gray: hsl(30, 10%, 34%);
+    --clr-gray-dark: hsl(24, 5%, 18%);
+    --clr-brown: hsl(14, 45%, 36%);
+    --clr-rose-dark: hsl(332, 51%, 32%);
+    --clr-rose-light: hsl(330, 100%, 98%);
+    --fw-normal: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit";
+    font-size: 1.6rem;
+    display: grid;
+    place-content: center;
+    min-height: 150vh;
+    color: var(--clr-gray);
+    background-color: var(--clr-peach);
+    font-weight: 350;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    font-family: "Young Serif";
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--clr-gray-dark);
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--clr-brown);
+    margin-top: 25px;
+    font-size: 2.6rem;
+}
+
+ul li {
+    line-height: 2;
+}
+
+strong {
+    margin-left: 15px;
+    font-weight: var(--fw-semi-bold);
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border-bottom: 1px solid var(--clr-peach-light);
+    padding: 15px 0px 10px 35px;
+}
+
+caption {
+    margin-bottom: 10px;
+}
+
+.second-column {
+    color: var(--clr-brown);
+    font-weight: var(--fw-semi-bold);
+    font-style: normal;
+    padding-right: 20px;
+}
+
+/* classes */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 735px;
+    background-color: white;
+    padding: 40px;
+    padding-bottom: 25px;
+    border-radius: 20px;
+}
+
+.preparation {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-rose-light);
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.preparation h3 {
+    color: var(--clr-rose-dark);
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-weight: var(--fw-semi-bold);
+    font-size: 2rem;
+}
+
+.preparation ul {
+    margin-top: 5px;
+    padding-left: 25px;
+}
+
+.preparation li,
+.ingredients li {
+    display: flex;
+    align-items: center;
+}
+
+.ingredients ul{
+    padding-left: 5px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+.ingredients {
+    border-bottom: 1px solid var(--clr-peach-light);
+}
+
+.ingredients h2 {
+    margin-bottom: 15px;
+}
+
+.instructions strong {
+    margin-left: 0px;
+}
+
+.instructions ol {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.instructions ol li {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.instructions h2 {
+    margin-bottom: 0px;
+}
+
+.instructions {
+    border-bottom: 1px solid var(--clr-peach-light);
+}
+
+/* ids */
+
+#last-row td {
+    border-bottom: 0px;
+}
+
+#mobile-picture {
+    display: none;
+}
+
+/* pseudo-elements */
+
+.preparation li::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--clr-rose-dark);
+    margin-right: .7rem;
+} 
+
+.ingredients li::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--clr-brown);
+    margin-right: 2.5rem;
+}
+
+.instructions li::marker {
+    color: var(--clr-brown);
+    font-weight: var(--fw-semi-bold);
+}
+
+/* Frontend Mentor links */
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+/* media queries */
+
+@media screen and (max-width: 375px) {
+
+
+    .wrapper {
+        width: 100%;
+        border-radius: 0px;
+        padding: 30px;
+        padding-bottom: 20px;
+        max-width: 375px;
+    }
+
+    #mobile-picture {
+        display: inline-block;
+        max-width: 375px;
+        border-radius: 0px;
+
+    }
+
+    #computer-picture {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-top: 0px;
+    }
+
+    body {
+        margin: 0 auto;
+    }
+} 
+
+    
